@@ -1,0 +1,1684 @@
+    @import "compass/css3";
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*-------------------------------------*/
+    /*       VARIABLES
+/*-------------------------------------*/
+
+    $blue: #009bbb;
+    $dark-blue: #002663;
+    $white: #ffffff;
+    $benton-regular: 'BentonSans Regular';
+    $benton-bold: 'BentonSans Bold';
+    $benton-book: 'BentonSans Book';
+    $benton-medium: 'BentonSans Medium';
+    /*-------------------------------------*/
+    /*       MAIN LANDING PAGE
+/*-------------------------------------*/
+
+    #cf-header {
+        padding: 1em;
+        font-family: $benton-regular !important;
+        font-size: 16px;
+        table {
+            border-collapse: collapse;
+            td {
+                padding-right: 1em;
+                color: #4d4f53;
+            }
+        }
+    }
+
+    #hero-container {
+        background-image: url("../img/Hero_Image_Desktop.jpg");
+        background-size: cover;
+        background-position: 50% 75%;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        padding: 120px 103px;
+        margin-top: -7px;
+        max-height: 530px;
+        #heading-cont {
+            width: 350px;
+            h1 {
+                margin: 0 0 30px 0;
+                font-family: $benton-book !important;
+                font-size: 50px;
+                line-height: 1.1;
+            }
+        }
+        ul {
+            margin-bottom: 0;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+        .btn-primary {
+            border-radius: 6px;
+            background-color: #002663;
+            border-color: #002663;
+            padding: 16px 20px;
+            font-size: 15px;
+        }
+        .btn-default {
+            font-size: 15px;
+            color: #002664;
+            padding: 16px 20px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: solid 1px #002664;
+        }
+    }
+
+    .modal {
+        z-index: 99999;
+    }
+
+    .modal-backdrop {
+        z-index: 9999;
+    }
+
+    .vertical-alignment-helper {
+        display: table;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .vertical-align-center {
+        display: table-cell;
+        vertical-align: middle;
+        pointer-events: none;
+    }
+
+    .modal-content {
+        /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+        width: inherit;
+        height: inherit;
+        /* To center horizontally */
+        margin: 0 auto;
+        pointer-events: all;
+    }
+
+    .error {
+        color: #f00 !important;
+        font-style: italic !important;
+        font-weight: normal !important;
+        font-size: 12px !important;
+    }
+
+    #contactSpecialist,
+    #contactConfirm {
+        .modal-content {
+            width: 340px;
+            margin: 0 auto;
+            .modal-header {
+                border-bottom: 0;
+            }
+            .modal-body {
+                padding: 15px 40px 0 40px;
+                h4 {
+                    font-family: $benton-regular !important;
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 0.73;
+                    color: #4d4f53;
+                    margin-bottom: 25px;
+                }
+                label {
+                    font-family: $benton-regular !important;
+                    font-size: 13px;
+                    color: #666666;
+                }
+                .form-control {
+                    border-radius: 2px;
+                }
+                p {
+                    font-family: $benton-regular !important;
+                    font-size: 11px;
+                    color: #666666;
+                    margin-bottom: 0;
+                    a {
+                        color: #002663;
+                    }
+                }
+                #card-form-cont {
+                    padding: 13px;
+                    margin: 0;
+                    border-radius: 2px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border: solid 1px #dadada;
+                    .col-sm-6 {
+                        padding: 0;
+                        margin: 0;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                        h4 {
+                            font-family: $benton-regular !important;
+                            font-size: 12px;
+                            line-height: 1em;
+                            color: #999999;
+                            margin-left: 5px;
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+            .modal-footer {
+                text-align: center;
+                border-top: 0;
+                padding-top: 15px;
+                padding-bottom: 40px;
+                .btn-default {
+                    border-radius: 3px;
+                    background-color: #ffffff;
+                    border: solid 1px #002663;
+                    font-family: $benton-regular !important;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #002663;
+                    padding: 11px 37px;
+                }
+                .btn-primary {
+                    border-radius: 3px;
+                    padding: 11px 37px;
+                    font-family: $benton-regular !important;
+                    font-size: 14px;
+                    background-color: #002663;
+                    border: solid 1px #002663;
+                }
+            }
+        }
+    }
+
+    body {
+        padding-right: 0 !important
+    }
+
+    #question-container {
+        background-color: #009bbb;
+        color: white;
+        padding: 77px 103px 10px 103px;
+        .row {
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-family: $benton-regular !important;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        label {
+            font-family: $benton-book !important;
+            font-size: 32px;
+            padding: 5px 0;
+        }
+        select {
+            position: absolute;
+            top: -9999em;
+        }
+        .rel-desc {
+            position: absolute;
+            top: 4.5em;
+            font-size: 12px;
+            font-family: $benton-regular !important;
+        }
+        .rel-link {
+            position: absolute;
+            top: 5.5em;
+            font-size: 12px;
+            font-family: $benton-regular !important;
+            z-index: 1;
+            a {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+        .dropcontainer {
+            z-index: 400 !important;
+        }
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9 {
+            padding: 0;
+        }
+        .drop1 {
+            width: 400px;
+        }
+        .drop2,
+        .drop3,
+        .drop4 {
+            width: 400px;
+        }
+        .drop5,
+        .drop6 {
+            width: 550px;
+        }
+        .dropcontainer {
+            position: relative;
+            font-size: 25px;
+            font-family: $benton-book !important;
+        }
+        .trigger {
+            font-family: $benton-book !important;
+            color: #fff!important;
+            padding: 5px 10px;
+            font-size: 32px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1) url(../img/chevron-down-white-px.png) 97.5% center no-repeat;
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-decoration: none!important;
+            opacity: 0.5;
+        }
+        .trigger:hover,
+        .trigger:active {
+            color: #fff!important;
+            background: rgba(255, 255, 255, 0.2) url(../img/chevron-down-white-px.png) 97.5% center no-repeat;
+            text-decoration: none!important;
+        }
+        .activetrigger {
+            color: #fff !important;
+            padding: 5px 10px;
+            font-size: 32px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2) url(../img/chevron-up-white-px.png) 97.5% center no-repeat;
+            display: block;
+            border-bottom: 1px solid #fff;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-decoration: none !important;
+        }
+        .activetrigger:hover,
+        .activetrigger:active {
+            background: rgba(255, 255, 255, 0.2) url(../img/chevron-up-white-px.png) 97.5% center no-repeat;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+        .dropcontainer ul {
+            font-size: 32px;
+            border: 0;
+            background: #fff;
+            list-style-type: none;
+            zpadding: 10px;
+            margin: 0;
+            width: 100%;
+            z-index: 100;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .dropcontainer ul li {
+            padding: 5px 8px;
+            margin: 0 !important;
+            border-top: 0 !important;
+            border-left: 1px solid #ccc !important;
+            border-right: 1px solid #ccc !important;
+            border-bottom: 1px solid #ccc !important;
+        }
+        .dropcontainer ul li:hover {
+            background: #f5f5f5;
+            outline: none;
+        }
+        .dropcontainer ul li:first-child {
+            display: none;
+        }
+        .dropcontainer ul li:last-child {
+            border-bottom: none;
+        }
+        .dropcontainer a {
+            color: #009bbb;
+            text-decoration: none;
+        }
+        .dropdownhidden {
+            display: none;
+        }
+        .dropdownvisible {
+            height: auto;
+        }
+    }
+
+    #question-btn {
+        background-color: rgba(0, 155, 186, 0.90);
+        padding: 35px 20px;
+        .btn-primary {
+            border-radius: 3px;
+            padding: 11px 37px;
+            font-family: $benton-regular !important;
+            font-size: 14px;
+            background-color: #002663;
+            border: solid 1px #002663;
+        }
+    }
+
+    #suggested-cards {
+        margin-top: 4em;
+        h2 {
+            font-family: $benton-book !important;
+        }
+        .checkbox {
+            text-align: right;
+            padding: 15px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .checkbox-text {
+            font-size: 12px;
+            margin-right: 30px;
+        }
+        .btn.active,
+        .btn:active {
+            box-shadow: none !important;
+        }
+        .toggle-off,
+        .toggle-on {
+            text-transform: uppercase;
+        }
+        .toggle.off.btn {
+            padding: 0;
+        }
+        .toggle-group {
+            width: 165% !important;
+        }
+        .toggle.off .toggle-group {
+            left: -65% !important;
+        }
+        .btn.btn-default.active.toggle-off {
+            color: #fff !important;
+            background-color: #a8a8a8 !important;
+            font-size: 8px;
+            left: 45%;
+        }
+        .btn.btn-primary.toggle-on {
+            color: #fff !important;
+            background-color: #009bbb;
+            top: 0;
+            left: -7.5%;
+            font-size: 8px;
+        }
+        .toggle-handle,
+        .toggle-handle:hover {
+            border-width: 1px;
+            border-color: #fff !important;
+            background-color: #fff !important;
+        }
+        .toggle.btn {
+            min-height: 0;
+            min-width: 0;
+        }
+        .toggle.btn.ios.btn-default.off {
+            background-color: #a8a8a8 !important;
+            border-color: #a8a8a8 !important;
+        }
+        .toggle.btn.ios.btn-primary,
+        .toggle.btn.ios.btn-default.off {
+            height: 25px !important;
+            width: 60px !important;
+            border-width: 1px !important;
+        }
+        .toggle.btn.ios.btn-primary,
+        .toggle.btn.ios.btn-primary:hover {
+            border-color: #009bbb;
+            background-color: #009bbb;
+        }
+        .btn {
+            vertical-align: top !important;
+            border-radius: 15px !important;
+        }
+        .toggle.ios,
+        .toggle-on.ios,
+        .toggle-off.ios {
+            border-radius: 20px;
+        }
+        /* MR Modals */
+        .modal-dialog {
+            width: 814px;
+            .modal-content {
+                border: 0;
+                border-radius: 0;
+                .modal-header {
+                    background-color: #009bbb;
+                    color: $white;
+                    font-family: $benton-book !important;
+                    padding: 51px !important;
+                    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+                    border-bottom: 0;
+                    h1 {
+                        font-size: 32px;
+                        line-height: 1.09;
+                        margin: 0 0 25px 0;
+                    }
+                    p {
+                        font-size: 18px;
+                        margin: 0;
+                        line-height: 1.33;
+                    }
+                    .cards {
+                        width: 260px;
+                    }
+                    .details-button {
+                        margin-top: 15px;
+                        text-align: center;
+                        .btn-primary {
+                            border-radius: 3px !important;
+                            padding: 12px 15px;
+                            font-family: $benton-regular !important;
+                            font-size: 14px;
+                            background-color: #002663;
+                            border: solid 1px #002663;
+                        }
+                    }
+                    .close {
+                        color: $white;
+                        background: none;
+                        opacity: 1;
+                        font-weight: 400;
+                        font-size: 24px;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
+                .modal-body {
+                    padding: 51px !important;
+                    h2 {
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                        font-size: 24px;
+                        color: #4d4f53;
+                        font-family: $benton-book !important;
+                    }
+                    li {
+                        font-size: 15px;
+                        font-family: $benton-regular !important;
+                        color: #4a4a4a;
+                        line-height: 1.4;
+                    }
+                }
+                .modal-footer {
+                    padding: 40px 51px 40px 51px !important;
+                    font-family: $benton-regular !important;
+                    font-size: 12px;
+                    text-align: left;
+                    color: #4d4f53;
+                    .readMore {
+                        color: #4d4f53;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    #card-results {
+        p {
+            text-align: left;
+        }
+        a {
+            text-decoration: underline;
+            font-size: 11px;
+            color: #666666;
+        }
+        ul>li {
+            display: inline-block;
+            list-style-type: none;
+            margin: 0 8px;
+            padding: 20px 0;
+            text-align: center;
+            vertical-align: top;
+            width: 350px;
+        }
+        #results-links {
+            position: relative;
+            z-index: 1;
+            #legend {
+                text-align: center;
+                line-height: 2em;
+                margin: -3em auto 0 auto;
+                background-color: #fff;
+                position: relative;
+                z-index: 30;
+                width: 50px;
+            }
+        }
+        .holder {
+            a {
+                background-color: #adadaf;
+                border-radius: 50%;
+                cursor: pointer;
+                display: inline-block;
+                margin: 0 15px;
+                padding: 8px;
+                vertical-align: middle;
+            }
+            a:nth-child(2),
+            a:nth-child(3),
+            a:nth-child(4),
+            a:nth-child(5) {
+                position: absolute;
+                top: -99999em;
+            }
+            span {
+                display: none !important;
+            }
+            .jp-current,
+            .jp-current:hover,
+            .jp-disabled,
+            .jp-disabled:hover {
+                background-color: #009bba;
+                cursor: default;
+            }
+            .jp-previous {
+                background-image: url("../img/left-arrow-active.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: transparent;
+                background-position: center;
+                padding: 12px;
+                margin-right: 25px;
+            }
+            .jp-previous.jp-disabled {
+                background-image: url("../img/left-arrow-inactive.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: transparent;
+                background-position: center;
+                padding: 12px;
+            }
+            .jp-next {
+                background-image: url("../img/right-arrow-active.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: transparent;
+                background-position: center;
+                padding: 12px;
+                margin-left: 25px;
+            }
+            .jp-next.jp-disabled {
+                background-image: url("../img/right-arrow-inactive.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: transparent;
+                background-position: center;
+                padding: 12px;
+            }
+        }
+        .card-hero {
+            min-height: 400px;
+            background-color: #f9f9f9;
+            position: relative;
+            padding-top: 100px;
+            .rec-tag {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                background-color: #009bbb;
+                p {
+                    font-family: $benton-regular !important;
+                    font-size: 11px;
+                    font-weight: 500;
+                    line-height: 0.91;
+                    text-align: center;
+                    color: #ffffff;
+                    margin: 10px 0;
+                }
+                img {
+                    vertical-align: text-bottom;
+                }
+            }
+            .cards {
+                width: 80%;
+                height: auto;
+                zbox-shadow: 10px 10px 5px #888888;
+                margin-bottom: 1em;
+            }
+            .amex-hd {
+                color: #002663;
+                font-size: 15px;
+                font-family: $benton-book !important;
+                color: #4d4f53;
+            }
+            .card-name-hd {
+                color: #4d4f53;
+                font-size: 22px;
+                font-family: $benton-book !important;
+                line-height: 1.25;
+            }
+        }
+        .card-features {
+            width: 90%;
+            margin: 40px auto 0 auto;
+            text-align: left !important;
+            .intro {
+                font-size: 18px !important;
+                font-family: $benton-book !important;
+                line-height: 1.33;
+                color: #4d4f53;
+                width: 100%;
+                height: 70px;
+                vertical-align: top;
+            }
+            .regular {
+                font-size: 16px !important;
+                font-family: $benton-book !important;
+                line-height: 1.33;
+                color: #4d4f53;
+                width: 100%;
+                height: 70px;
+                vertical-align: top;
+            }
+            .divider {
+                font-size: 16px !important;
+                font-family: $benton-book !important;
+                line-height: 1.33;
+                color: #4d4f53;
+                width: 100%;
+                height: 150px;
+                vertical-align: top;
+                padding-top: 20px;
+                border-bottom: solid #eee 1px;
+            }
+            .feature-heading {
+                font-size: 16px !important;
+                font-family: $benton-book !important;
+                line-height: 1.33;
+                color: #4d4f53;
+                width: 100%;
+                height: 70px;
+                vertical-align: top;
+                padding-top: 5px;
+            }
+            .short-divider {
+                font-size: 16px !important;
+                font-family: $benton-book !important;
+                line-height: 1.33;
+                color: #4d4f53;
+                width: 100%;
+                height: 50px;
+                vertical-align: top;
+                padding-top: 15px;
+                border-bottom: solid #eee 1px;
+            }
+            p {
+                font-size: 16px !important;
+                font-family: $benton-book !important;
+                line-height: 1.33;
+                color: #4d4f53;
+            }
+            h3 {
+                font-family: $benton-regular !important;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #4d4f53;
+            }
+            .feature-links {
+                margin-bottom: 25px;
+                a {
+                    font-family: $benton-regular !important;
+                    font-size: 15px;
+                    color: #002663;
+                    text-decoration: none;
+                }
+            }
+        }
+        .contact-button {
+            width: 100%;
+            padding-left: 5%;
+            margin: 0 auto 20px 0;
+            text-align: left;
+        }
+        .contact-button .btn-primary {
+            background-color: #002663;
+            font-family: $benton-book !important;
+            font-size: 14px;
+            border-radius: 3px;
+            border-color: #002663;
+            padding: 9px 20.375px;
+            color: #fff;
+        }
+        .card-terms {
+            padding-left: 5%;
+        }
+    }
+
+    #cardterms,
+    #terms,
+    .terms {
+        padding: 75px 105px;
+        background-color: #f2f2f2;
+        font-size: 12px;
+        .read {
+            overflow: hidden;
+            font-size: 12px !important;
+            transition: all 0.5s;
+            margin-bottom: 10px;
+        }
+        .read-less {
+            height: 200px!important;
+        }
+        .explorer-fix {
+            margin-top: 75px;
+        }
+    }
+
+    #blurb1,
+    #cblurb1 {
+        border-bottom: solid 1px #f2f2f2;
+        padding: 15px 0;
+        clear: both;
+        h4 {
+            font-family: $benton-book !important;
+            font-size: 22px;
+            line-height: 1.25;
+            text-align: center;
+            color: #4d4f53;
+        }
+    }
+
+    #blurb2,
+    #cblurb2 {
+        border-bottom: solid 1px #f2f2f2;
+        padding: 15px 0;
+        a {
+            color: #002663;
+        }
+        h5 {
+            font-family: $benton-book !important;
+            font-size: 16px;
+            text-align: center;
+            color: #002663;
+        }
+    }
+
+    #blurb3,
+    #cblurb3 {
+        padding: 15px 0;
+        a {
+            color: #002663;
+        }
+        h5 {
+            font-family: $benton-regular !important;
+            font-size: 16px;
+            text-align: center;
+            color: #002663;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        #question-container {
+            .rel-desc {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        #cf-background {
+            position: relative;
+            z-index: 999;
+            background: #fff url("https://www.aexp-static.com/nav/ngn/img/iNav_ngi_sprite_new.gif?ver=0916_01") repeat-x scroll 0 -123px;
+            clear: both;
+            display: block;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            width: 100%;
+            #cf-header-mob {
+                padding: 0.5em;
+                font-family: $benton-regular !important;
+                font-size: 16px;
+                table {
+                    border-collapse: collapse;
+                    td {
+                        padding-right: 1em;
+                        color: #333333;
+                        img {
+                            width: 54px;
+                            height: 48px;
+                        }
+                    }
+                }
+            }
+        }
+        #hero-container {
+            background-image: url("../img/Hero_Image_Mobile.jpg");
+            background-position: center center;
+            margin-top: 15px;
+            max-height: 450px;
+            #heading-cont {
+                width: 220px;
+                h1 {
+                    font-size: 31px;
+                    margin-top: 20px;
+                }
+            }
+        }
+        #main-content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        #hero-container {
+            padding: 5px;
+        }
+        #question-container {
+            padding: 20px;
+            .row {
+                margin-bottom: 0px;
+            }
+            h4 {
+                font-size: 14px;
+            }
+            label {
+                font-size: 22px;
+            }
+            .trigger {
+                font-size: 22px;
+                margin-bottom: 30px;
+                padding: 5px 20px;
+            }
+            .activetrigger {
+                font-size: 22px;
+                padding: 5px 20px;
+            }
+            .dropcontainer ul {
+                font-size: 22px;
+            }
+            .dropcontainer ul li {
+                padding: 5px 18px;
+            }
+            .drop1,
+            .drop2,
+            .drop3,
+            .drop4,
+            .drop5,
+            .drop6 {
+                width: 100%;
+            }
+            .rel-desc {
+                display: block;
+                top: 8em;
+            }
+            #submit-find {
+                width: 100%;
+            }
+        }
+        #suggested-cards {
+            h2 {
+                text-align: center;
+            }
+            .checkbox label,
+            .radio label {
+                padding-left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .btn.btn-primary.toggle-on {
+                left: -15%;
+            }
+            .btn.btn-default.active.toggle-off {
+                left: 35%;
+            }
+            /* MR Modals */
+            .modal-dialog {
+                width: 375px;
+                .modal-content {
+                    border: 0;
+                    border-radius: 0;
+                    .modal-header {
+                        background-color: #009bbb;
+                        color: $white;
+                        font-family: $benton-book !important;
+                        padding: 50px 21px 60px 21px !important;
+                        text-align: center;
+                        h1 {
+                            font-size: 32px;
+                            line-height: 1.09;
+                            margin: 0 0 25px 0;
+                        }
+                        p {
+                            font-size: 18px;
+                            line-height: 1.33;
+                        }
+                        .cards {
+                            margin-top: 30px;
+                            width: 260px;
+                        }
+                        .details-button {
+                            margin-top: 15px;
+                            text-align: center;
+                            .btn-primary {
+                                border-radius: 3px !important;
+                                padding: 12px 15px;
+                                font-family: $benton-regular !important;
+                                font-size: 14px;
+                                background-color: #002663;
+                                border: solid 1px #002663;
+                            }
+                        }
+                        .close {
+                            color: $white;
+                            background: none;
+                            opacity: 1;
+                            font-weight: 400;
+                            font-size: 24px;
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        #card-results {
+            margin: 0;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            ul>li {
+                width: 100%;
+                margin: 0;
+            }
+            #results-links {
+                #legend {
+                    width: 80px;
+                }
+            }
+            .card-features {
+                .regular,
+                .divider,
+                .feature-heading,
+                .short-divider {
+                    height: auto;
+                    padding: 10px 0;
+                }
+            }
+            .contact-button {
+                text-align: center;
+            }
+            .card-terms a {
+                text-align: center;
+            }
+        }
+        #cardterms,
+        #terms {
+            padding: 20px 20px 10px 20px;
+            .container {
+                padding: 0;
+                margin: 0;
+                .explorer-fix {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    /*-------------------------------------*/
+    /*       CARD LANDING PAGES
+/*-------------------------------------*/
+
+    #card-headings {
+        background-color: #009bbb;
+        color: $white;
+        text-align: left;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: -7px;
+        margin-bottom: 80px;
+        h2 {
+            font-family: $benton-bold !important;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.3;
+            text-align: center;
+        }
+        p {
+            font-family: $benton-book !important;
+            font-size: 15px;
+            line-height: 1.6;
+            text-align: center;
+        }
+    }
+
+    #rewards {
+        background-color: #f9f9f9;
+        text-align: center;
+        min-height: 500px;
+        .cards {
+            width: 80%;
+            height: auto;
+            zbox-shadow: 10px 10px 5px #888888;
+            margin: 56px 0 1em 0;
+        }
+        h2 {
+            font-family: $benton-regular !important;
+            font-size: 16px;
+            line-height: 1.41;
+            color: #4d4f53;
+        }
+    }
+
+    #rewards {
+        min-height: 388px;
+        p,
+        h2 {
+            margin: 0;
+        }
+        .cards {
+            width: 260px;
+        }
+        .contact-button {
+            margin-top: 15px;
+        }
+    }
+
+    #benefits {
+        min-height: 388px;
+        padding: 0 80px 80px 80px;
+        color: #4d4f53;
+        h1 {
+            font-family: $benton-book !important;
+            font-size: 38px;
+            margin-top: 0;
+        }
+        h2 {
+            font-family: $benton-book !important;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 30px;
+        }
+        p {
+            font-family: $benton-book !important;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .contact-button {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .contact-button .btn-primary {
+            background-color: #002663;
+            font-family: $benton-regular !important;
+            font-size: 15px;
+            border-radius: 6px;
+            border-color: #002663;
+            padding: 12px 20px;
+            color: #fff;
+        }
+    }
+
+    #blurb0 {
+        padding-top: 1em;
+        padding-bottom: 4em;
+        p {
+            font-family: $benton-regular !important;
+            font-size: 15px;
+            line-height: 1.6;
+            text-align: left;
+            color: #666666;
+        }
+        a {
+            color: #002664;
+            text-decoration: underline;
+        }
+    }
+
+    .platinum-corporate-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/01-Caro_img_D_Corporate-plat.jpg");
+    }
+
+    .gold-corporate-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/02-Caro_img_D_Corporate-gold.jpg");
+    }
+
+    .green-corporate-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/03-Caro_img_D_Corporate-green.jpg");
+    }
+
+    .qantas-corporate-platinum-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/04-Caro_img_D_Qantas-Corporate-plat.jpg");
+    }
+
+    .qantas-corporate-gold-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/05-Caro_img_D_Qantas-Corporate-gold.jpg");
+    }
+
+    .qantas-corporate-green-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/06-Caro_img_D_Qantas-Corporate-green.jpg");
+    }
+
+    .qantas-business-credit-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/07-Caro_img_D_Qantas-Business-credit-card.jpg");
+    }
+
+    .qantas-business-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/08-Caro_img_D_Qantas-Business-card.jpg");
+    }
+
+    .qantas-business-rewards-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/15-Caro_img_D_Qantas-Business-Rewards-card.jpg");
+    }
+
+    .velocity-platinum-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/09-Caro_img_Velocity-Platinum_card.jpg");
+    }
+
+    .business-platinum-card-hero {
+        background-image: url("..//img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/14-Caro_img_D_Business-platinum.jpg");
+    }
+
+    .business-gold-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/10-Caro_img_D_Business-gold.jpg");
+    }
+
+    .business-green-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/11-Caro_img_D_Business-green.jpg");
+    }
+
+    .business-accelerator-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/12-Caro_img_D_Business-accelerator-card.jpg");
+    }
+
+    .business-explorer-credit-card-hero {
+        background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/13-Caro_img_D_Business-Explorer.jpg");
+    }
+
+    @media (max-width: 768px) {
+        .platinum-corporate-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/01-Caro_img_M_Corporate-plat.jpg");
+        }
+        .gold-corporate-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/02-Caro_img_M_Corporate-gold.jpg");
+        }
+        .green-corporate-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/03-img_M_Corporate-green.jpg");
+        }
+        .qantas-corporate-platinum-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/04-Caro_img_M_Qantas-Corporate-plat.jpg");
+        }
+        .qantas-corporate-gold-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/05-Caro_img_M_Qantas-Corporate-gold.jpg");
+        }
+        .qantas-corporate-green-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/06-Caro_img_M_Qantas-Corporate-green.jpg");
+        }
+        .qantas-business-credit-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/07-img_M_Qantas-Business-credit-card.jpg");
+        }
+        .qantas-business-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/08-img_M_Qantas-card.jpg");
+        }
+        .qantas-business-rewards-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/15-img_M_Qantas-Rewards-card.jpg");
+        }
+        .velocity-platinum-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/09-Caro_img_M_Velocity-plat-card.jpg");
+        }
+        .business-platinum-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/14-img_M_Business-platinum.jpg");
+        }
+        .business-gold-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/10-img_M_Business-gold.jpg");
+        }
+        .business-green-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/11-img_M_Business-green.jpg");
+        }
+        .business-accelerator-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/12-img_M_Business-accelerator-card.jpg");
+        }
+        .business-explorer-credit-card-hero {
+            background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/13-Caro_img_M_Business-Explorer.jpg");
+        }
+    }
+
+    #cp-slider {
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 538px;
+        .container {
+            position: relative;
+            padding-top: 80px;
+            #carousel-container {
+                padding: 30px;
+                width: 288px;
+                min-height: 378px;
+                opacity: 0.9;
+                background-color: $white;
+                position: relative;
+                .carousel-inner {
+                    .item {
+                        width: 100%;
+                        font-family: $benton-book !important;
+                        color: #4d4f53;
+                        h1 {
+                            font-size: 24px;
+                        }
+                        p {
+                            font-size: 15px;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+                #static-cap {
+                    display: table;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 0;
+                    .static-cap-row {
+                        display: table-row;
+                        .static-cap-cell {
+                            display: table-cell;
+                            vertical-align: bottom;
+                            position: relative;
+                            .carousel-indicators {
+                                margin-left: 0 !important;
+                                position: static;
+                                width: 100%;
+                                li {
+                                    background-color: #dbdbdb !important;
+                                    border-radius: 0 !important;
+                                    border: 0 !important;
+                                    height: 2px !important;
+                                    width: 40px !important;
+                                    margin: 1px !important;
+                                }
+                                .active {
+                                    background-color: #009bbb !important;
+                                }
+                            }
+                            #carousel-directions {
+                                width: 100%;
+                                position: relative;
+                                p {
+                                    padding-bottom: 5px;
+                                    .carousel-control.left,
+                                    .carousel-control.right {
+                                        position: absolute;
+                                        background-image: none;
+                                        position: static;
+                                        img {
+                                            width: 24px;
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #card-features {
+        padding-top: 100px;
+        h1 {
+            font-family: $benton-book !important;
+            font-size: 30px;
+            text-align: left;
+            color: #4d4f53;
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+        #desktop-tabs {
+            .nav-tabs {
+                border-bottom: 3px solid #dbdbdb;
+            }
+            .nav-tabs>li {
+                margin-bottom: -3px;
+                color: #666666;
+                font-family: $benton-regular !important;
+                font-size: 16px;
+                text-align: center;
+                min-width: 25%;
+            }
+            .nav-tabs>li>a {
+                border-radius: 0 !important;
+                color: #666666;
+                border-top: 0 !important;
+                border-left: 0 !important;
+                border-right: 0 !important;
+                .rewards-icon {
+                    background-image: url("../img/ic_rewards_inactive.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+                .travel-icon {
+                    background-image: url("../img/ic_travel_inactive.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+                .access-icon {
+                    background-image: url("../img/ic_access_and_offers_inactive.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+                .services-icon {
+                    background-image: url("../img/ic_services_and_tools_inactive.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+            }
+            .nav-tabs>li>a:hover {
+                border: 0;
+                background-color: $white;
+                border-top: 0 !important;
+                border-left: 0 !important;
+                border-right: 0 !important;
+                border-bottom: solid 3px #019bbb;
+            }
+            .nav-tabs>li.active>a,
+            .nav-tabs>li.active>a:focus,
+            .nav-tabs>li.active>a:hover {
+                border-top: 0 !important;
+                border-left: 0 !important;
+                border-right: 0 !important;
+                border-bottom: solid 3px #019bbb;
+                color: #009cbb;
+                cursor: default;
+                .rewards-icon {
+                    background-image: url("../img/ic_rewards_active.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+                .travel-icon {
+                    background-image: url("../img/ic_travel_active.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+                .access-icon {
+                    background-image: url("../img/ic_access_and_offers_active.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+                .services-icon {
+                    background-image: url("../img/ic_services_and_tools_active.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 32px;
+                    width: 32px;
+                    margin: 0 auto;
+                }
+            }
+            .tab-content {
+                .tab-pane {
+                    padding-top: 80px;
+                    padding-bottom: 100px;
+                    font-family: $benton-regular !important;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #4d4f53;
+                    .row {
+                        margin-bottom: 60px;
+                        .right-side {
+                            padding: 0 80px;
+                            ol,
+                            ul {
+                                margin-left: 20px;
+                            }
+                            .bull-title {
+                                font-family: $benton-medium !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #mobile-accordion {
+            display: none;
+        }
+    }
+
+    #card-specialist-cont {
+        text-align: center;
+        background-color: #009bbb !important;
+        float: left;
+        width: 100%;
+        padding-bottom: 50px;
+        #card-display {
+            min-height: 305px;
+            padding: 0;
+            .cards {
+                width: 240px;
+                height: auto;
+                margin: 84px 0 0 0;
+            }
+        }
+        #specialist-cont {
+            color: $white;
+            padding: 84px 0 0 0;
+            min-height: 305px;
+            h1 {
+                margin-bottom: 18px;
+                margin-top: 0;
+                font-size: 28px;
+                text-align: left;
+                font-family: $benton-book !important;
+            }
+            .contact-button {
+                margin-bottom: 20px;
+                p {
+                    text-align: left;
+                    .btn-primary {
+                        background-color: #002663;
+                        font-family: $benton-regular !important;
+                        font-size: 14px;
+                        border-radius: 3px;
+                        border-color: #002663;
+                        padding: 10px 10px;
+                        color: #fff;
+                    }
+                    .apply-btn {
+                        width: 110px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        #card-headings {
+            padding: 30px 0;
+            margin-bottom: 40px;
+            p {
+                margin: 0;
+            }
+        }
+        #card-promo-cont {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        #rewards {
+            min-height: auto;
+            padding-bottom: 2em;
+        }
+        #benefits {
+            min-height: auto;
+            padding: 0 2em 2em 2em;
+            text-align: center;
+            h1 {
+                font-size: 36px;
+            }
+        }
+        #cp-slider {
+            position: relative;
+            min-height: 197px;
+            .container {
+                position: absolute;
+                padding: 0;
+                left: 0;
+                bottom: -362px;
+                #carousel-container {
+                    padding: 0px;
+                    width: 100%;
+                    opacity: 1;
+                    background-color: #f9f9f9;
+                    min-height: 362px;
+                    .carousel-inner {
+                        .item {
+                            width: 100%;
+                            padding: 10%;
+                            font-family: $benton-book !important;
+                            color: #4d4f53;
+                            h1 {
+                                font-size: 24px;
+                            }
+                            p {
+                                font-size: 15px;
+                                line-height: 1.4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #card-features {
+            padding-top: 402px;
+            #desktop-tabs {
+                display: none;
+            }
+            #mobile-accordion {
+                display: block;
+                #accordion {
+                    border-bottom: solid 1px #f2f2f2;
+                    .panel-default,
+                    .panel {
+                        border-top: solid 1px #f2f2f2;
+                        border-left: 0;
+                        border-right: 0;
+                        border-bottom: 0;
+                        box-shadow: none !important;
+                        .panel-heading {
+                            background-color: $white;
+                            padding: 27px 15px 26px 15px;
+                            .panel-title {
+                                position: relative;
+                                .glyphicon {
+                                    position: absolute;
+                                    right: 0px;
+                                    color: #009bbb;
+                                    -webkit-text-stroke: 3.5px white;
+                                }
+                            }
+                            a {
+                                width: 100%;
+                                color: #4d4f53;
+                                font-size: 22px;
+                                font-family: $benton-regular !important;
+                                h4 {
+                                    font-size: 22px;
+                                    font-family: $benton-regular !important;
+                                    img {
+                                        margin-right: 10px;
+                                        vertical-align: text-bottom;
+                                    }
+                                }
+                            }
+                            a:hover,
+                            a:focus,
+                            a:active {
+                                text-decoration: none;
+                                color: #4d4f53;
+                            }
+                        }
+                        .panel-body {
+                            font-family: $benton-regular !important;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            color: #4d4f53;
+                            border-top: 0;
+                            ul {
+                                margin-left: 20px;
+                            }
+                            .bull-title {
+                                font-family: $benton-medium !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #card-specialist-cont {
+            text-align: center;
+            background-color: #009bbb !important;
+            float: left;
+            width: 100%;
+            padding: 0 20px 50px 20px;
+            .container {
+                margin: 0;
+                padding: 0;
+                #card-display {
+                    min-height: auto;
+                    .cards {
+                        width: 214px;
+                        height: auto;
+                        margin: 68px auto 0 auto;
+                    }
+                }
+                #specialist-cont {
+                    color: $white;
+                    padding-top: 10.5px;
+                    min-height: auto;
+                    h1 {
+                        margin-bottom: 18px;
+                        margin-top: 0;
+                        font-size: 28px;
+                        text-align: center;
+                    }
+                    .contact-button {
+                        margin-bottom: 20px;
+                        p {
+                            text-align: center;
+                            .btn-primary {
+                                background-color: #002663;
+                                font-family: $benton-regular !important;
+                                font-size: 14px;
+                                border-radius: 3px;
+                                border-color: #002663;
+                                padding: 10px 10px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

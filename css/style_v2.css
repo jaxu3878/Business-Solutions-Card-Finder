@@ -1,0 +1,1417 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+/*-------------------------------------*/
+    /*       VARIABLES
+/*-------------------------------------*/
+/*-------------------------------------*/
+    /*       MAIN LANDING PAGE
+/*-------------------------------------*/
+#cf-header {
+  padding: 1em;
+  font-family: "BentonSans Regular" !important;
+  font-size: 16px; }
+  #cf-header table {
+    border-collapse: collapse; }
+    #cf-header table td {
+      padding-right: 1em;
+      color: #4d4f53; }
+
+#hero-container {
+  background-image: url("../img/Hero_Image_Desktop.jpg");
+  background-size: cover;
+  background-position: 50% 75%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding: 120px 103px;
+  margin-top: -7px;
+  max-height: 530px; }
+  #hero-container #heading-cont {
+    width: 350px; }
+    #hero-container #heading-cont h1 {
+      margin: 0 0 30px 0;
+      font-family: "BentonSans Book" !important;
+      font-size: 50px;
+      line-height: 1.1; }
+  #hero-container ul {
+    margin-bottom: 0; }
+  #hero-container li {
+    list-style-type: none;
+    margin-bottom: 10px; }
+  #hero-container .btn-primary {
+    border-radius: 6px;
+    background-color: #002663;
+    border-color: #002663;
+    padding: 16px 20px;
+    font-size: 15px; }
+  #hero-container .btn-default {
+    font-size: 15px;
+    color: #002664;
+    padding: 16px 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid 1px #002664; }
+
+.modal {
+  z-index: 99999; }
+
+.modal-backdrop {
+  z-index: 9999; }
+
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; }
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none; }
+
+.modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all; }
+
+.error {
+  color: #f00 !important;
+  font-style: italic !important;
+  font-weight: normal !important;
+  font-size: 12px !important; }
+
+#contactSpecialist .modal-content,
+#contactConfirm .modal-content {
+  width: 340px;
+  margin: 0 auto; }
+  #contactSpecialist .modal-content .modal-header,
+  #contactConfirm .modal-content .modal-header {
+    border-bottom: 0; }
+  #contactSpecialist .modal-content .modal-body,
+  #contactConfirm .modal-content .modal-body {
+    padding: 15px 40px 0 40px; }
+    #contactSpecialist .modal-content .modal-body h4,
+    #contactConfirm .modal-content .modal-body h4 {
+      font-family: "BentonSans Regular" !important;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 0.73;
+      color: #4d4f53;
+      margin-bottom: 25px; }
+    #contactSpecialist .modal-content .modal-body label,
+    #contactConfirm .modal-content .modal-body label {
+      font-family: "BentonSans Regular" !important;
+      font-size: 13px;
+      color: #666666; }
+    #contactSpecialist .modal-content .modal-body .form-control,
+    #contactConfirm .modal-content .modal-body .form-control {
+      border-radius: 2px; }
+    #contactSpecialist .modal-content .modal-body p,
+    #contactConfirm .modal-content .modal-body p {
+      font-family: "BentonSans Regular" !important;
+      font-size: 11px;
+      color: #666666;
+      margin-bottom: 0; }
+      #contactSpecialist .modal-content .modal-body p a,
+      #contactConfirm .modal-content .modal-body p a {
+        color: #002663; }
+    #contactSpecialist .modal-content .modal-body #card-form-cont,
+    #contactConfirm .modal-content .modal-body #card-form-cont {
+      padding: 13px;
+      margin: 0;
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: solid 1px #dadada; }
+      #contactSpecialist .modal-content .modal-body #card-form-cont .col-sm-6,
+      #contactConfirm .modal-content .modal-body #card-form-cont .col-sm-6 {
+        padding: 0;
+        margin: 0; }
+        #contactSpecialist .modal-content .modal-body #card-form-cont .col-sm-6 img,
+        #contactConfirm .modal-content .modal-body #card-form-cont .col-sm-6 img {
+          width: 100%;
+          height: auto; }
+        #contactSpecialist .modal-content .modal-body #card-form-cont .col-sm-6 h4,
+        #contactConfirm .modal-content .modal-body #card-form-cont .col-sm-6 h4 {
+          font-family: "BentonSans Regular" !important;
+          font-size: 12px;
+          line-height: 1em;
+          color: #999999;
+          margin-left: 5px;
+          margin-top: 0px; }
+  #contactSpecialist .modal-content .modal-footer,
+  #contactConfirm .modal-content .modal-footer {
+    text-align: center;
+    border-top: 0;
+    padding-top: 15px;
+    padding-bottom: 40px; }
+    #contactSpecialist .modal-content .modal-footer .btn-default,
+    #contactConfirm .modal-content .modal-footer .btn-default {
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: solid 1px #002663;
+      font-family: "BentonSans Regular" !important;
+      font-size: 14px;
+      text-align: center;
+      color: #002663;
+      padding: 11px 37px; }
+    #contactSpecialist .modal-content .modal-footer .btn-primary,
+    #contactConfirm .modal-content .modal-footer .btn-primary {
+      border-radius: 3px;
+      padding: 11px 37px;
+      font-family: "BentonSans Regular" !important;
+      font-size: 14px;
+      background-color: #002663;
+      border: solid 1px #002663; }
+
+body {
+  padding-right: 0 !important; }
+
+#question-container {
+  background-color: #009bbb;
+  color: white;
+  padding: 77px 103px 10px 103px; }
+  #question-container .row {
+    margin-bottom: 30px; }
+  #question-container h4 {
+    font-family: "BentonSans Regular" !important;
+    font-size: 20px;
+    font-weight: 500; }
+  #question-container label {
+    font-family: "BentonSans Book" !important;
+    font-size: 32px;
+    padding: 5px 0; }
+  #question-container select {
+    position: absolute;
+    top: -9999em; }
+  #question-container .rel-desc {
+    position: absolute;
+    top: 4.5em;
+    font-size: 12px;
+    font-family: "BentonSans Regular" !important; }
+  #question-container .rel-link {
+    position: absolute;
+    top: 5.5em;
+    font-size: 12px;
+    font-family: "BentonSans Regular" !important;
+    z-index: 1; }
+    #question-container .rel-link a {
+      color: #ffffff;
+      text-decoration: underline; }
+  #question-container .dropcontainer {
+    z-index: 400 !important; }
+  #question-container .col-sm-1,
+  #question-container .col-sm-10,
+  #question-container .col-sm-11,
+  #question-container .col-sm-12,
+  #question-container .col-sm-2,
+  #question-container .col-sm-3,
+  #question-container .col-sm-4,
+  #question-container .col-sm-5,
+  #question-container .col-sm-6,
+  #question-container .col-sm-7,
+  #question-container .col-sm-8,
+  #question-container .col-sm-9 {
+    padding: 0; }
+  #question-container .drop1 {
+    width: 400px; }
+  #question-container .drop2,
+  #question-container .drop3,
+  #question-container .drop4 {
+    width: 400px; }
+  #question-container .drop5,
+  #question-container .drop6 {
+    width: 550px; }
+  #question-container .dropcontainer {
+    position: relative;
+    font-size: 25px;
+    font-family: "BentonSans Book" !important; }
+  #question-container .trigger {
+    font-family: "BentonSans Book" !important;
+    color: #fff !important;
+    padding: 5px 10px;
+    font-size: 32px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1) url(../img/chevron-down-white-px.png) 97.5% center no-repeat;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    opacity: 0.5; }
+  #question-container .trigger:hover,
+  #question-container .trigger:active {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.2) url(../img/chevron-down-white-px.png) 97.5% center no-repeat;
+    text-decoration: none !important; }
+  #question-container .activetrigger {
+    color: #fff !important;
+    padding: 5px 10px;
+    font-size: 32px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2) url(../img/chevron-up-white-px.png) 97.5% center no-repeat;
+    display: block;
+    border-bottom: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none !important; }
+  #question-container .activetrigger:hover,
+  #question-container .activetrigger:active {
+    background: rgba(255, 255, 255, 0.2) url(../img/chevron-up-white-px.png) 97.5% center no-repeat;
+    color: #fff !important;
+    text-decoration: none !important; }
+  #question-container .dropcontainer ul {
+    font-size: 32px;
+    border: 0;
+    background: #fff;
+    list-style-type: none;
+    zpadding: 10px;
+    margin: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  #question-container .dropcontainer ul li {
+    padding: 5px 8px;
+    margin: 0 !important;
+    border-top: 0 !important;
+    border-left: 1px solid #ccc !important;
+    border-right: 1px solid #ccc !important;
+    border-bottom: 1px solid #ccc !important; }
+  #question-container .dropcontainer ul li:hover {
+    background: #f5f5f5;
+    outline: none; }
+  #question-container .dropcontainer ul li:first-child {
+    display: none; }
+  #question-container .dropcontainer ul li:last-child {
+    border-bottom: none; }
+  #question-container .dropcontainer a {
+    color: #009bbb;
+    text-decoration: none; }
+  #question-container .dropdownhidden {
+    display: none; }
+  #question-container .dropdownvisible {
+    height: auto; }
+
+#question-btn {
+  background-color: rgba(0, 155, 186, 0.9);
+  padding: 35px 20px; }
+  #question-btn .btn-primary {
+    border-radius: 3px;
+    padding: 11px 37px;
+    font-family: "BentonSans Regular" !important;
+    font-size: 14px;
+    background-color: #002663;
+    border: solid 1px #002663; }
+
+#suggested-cards {
+  margin-top: 4em;
+  /* MR Modals */ }
+  #suggested-cards h2 {
+    font-family: "BentonSans Book" !important; }
+  #suggested-cards .checkbox {
+    text-align: right;
+    padding: 15px 0;
+    position: relative;
+    z-index: 2; }
+  #suggested-cards .checkbox-text {
+    font-size: 12px;
+    margin-right: 30px; }
+  #suggested-cards .btn.active,
+  #suggested-cards .btn:active {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+  #suggested-cards .toggle-off,
+  #suggested-cards .toggle-on {
+    text-transform: uppercase; }
+  #suggested-cards .toggle.off.btn {
+    padding: 0; }
+  #suggested-cards .toggle-group {
+    width: 165% !important; }
+  #suggested-cards .toggle.off .toggle-group {
+    left: -65% !important; }
+  #suggested-cards .btn.btn-default.active.toggle-off {
+    color: #fff !important;
+    background-color: #a8a8a8 !important;
+    font-size: 8px;
+    left: 45%; }
+  #suggested-cards .btn.btn-primary.toggle-on {
+    color: #fff !important;
+    background-color: #009bbb;
+    top: 0;
+    left: -7.5%;
+    font-size: 8px; }
+  #suggested-cards .toggle-handle,
+  #suggested-cards .toggle-handle:hover {
+    border-width: 1px;
+    border-color: #fff !important;
+    background-color: #fff !important; }
+  #suggested-cards .toggle.btn {
+    min-height: 0;
+    min-width: 0; }
+  #suggested-cards .toggle.btn.ios.btn-default.off {
+    background-color: #a8a8a8 !important;
+    border-color: #a8a8a8 !important; }
+  #suggested-cards .toggle.btn.ios.btn-primary,
+  #suggested-cards .toggle.btn.ios.btn-default.off {
+    height: 25px !important;
+    width: 60px !important;
+    border-width: 1px !important; }
+  #suggested-cards .toggle.btn.ios.btn-primary,
+  #suggested-cards .toggle.btn.ios.btn-primary:hover {
+    border-color: #009bbb;
+    background-color: #009bbb; }
+  #suggested-cards .btn {
+    vertical-align: top !important;
+    border-radius: 15px !important; }
+  #suggested-cards .toggle.ios,
+  #suggested-cards .toggle-on.ios,
+  #suggested-cards .toggle-off.ios {
+    border-radius: 20px; }
+  #suggested-cards .modal-dialog {
+    width: 814px; }
+    #suggested-cards .modal-dialog .modal-content {
+      border: 0;
+      border-radius: 0; }
+      #suggested-cards .modal-dialog .modal-content .modal-header {
+        background-color: #009bbb;
+        color: #ffffff;
+        font-family: "BentonSans Book" !important;
+        padding: 51px !important;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+        border-bottom: 0; }
+        #suggested-cards .modal-dialog .modal-content .modal-header h1 {
+          font-size: 32px;
+          line-height: 1.09;
+          margin: 0 0 25px 0; }
+        #suggested-cards .modal-dialog .modal-content .modal-header p {
+          font-size: 18px;
+          margin: 0;
+          line-height: 1.33; }
+        #suggested-cards .modal-dialog .modal-content .modal-header .cards {
+          width: 260px; }
+        #suggested-cards .modal-dialog .modal-content .modal-header .details-button {
+          margin-top: 15px;
+          text-align: center; }
+          #suggested-cards .modal-dialog .modal-content .modal-header .details-button .btn-primary {
+            border-radius: 3px !important;
+            padding: 12px 15px;
+            font-family: "BentonSans Regular" !important;
+            font-size: 14px;
+            background-color: #002663;
+            border: solid 1px #002663; }
+        #suggested-cards .modal-dialog .modal-content .modal-header .close {
+          color: #ffffff;
+          background: none;
+          opacity: 1;
+          font-weight: 400;
+          font-size: 24px;
+          position: absolute;
+          top: 10px;
+          right: 10px; }
+      #suggested-cards .modal-dialog .modal-content .modal-body {
+        padding: 51px !important; }
+        #suggested-cards .modal-dialog .modal-content .modal-body h2 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          font-size: 24px;
+          color: #4d4f53;
+          font-family: "BentonSans Book" !important; }
+        #suggested-cards .modal-dialog .modal-content .modal-body li {
+          font-size: 15px;
+          font-family: "BentonSans Regular" !important;
+          color: #4a4a4a;
+          line-height: 1.4; }
+      #suggested-cards .modal-dialog .modal-content .modal-footer {
+        padding: 40px 51px 40px 51px !important;
+        font-family: "BentonSans Regular" !important;
+        font-size: 12px;
+        text-align: left;
+        color: #4d4f53; }
+        #suggested-cards .modal-dialog .modal-content .modal-footer .readMore {
+          color: #4d4f53;
+          text-decoration: underline; }
+
+#card-results p {
+  text-align: left; }
+#card-results a {
+  text-decoration: underline;
+  font-size: 11px;
+  color: #666666; }
+#card-results ul > li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 8px;
+  padding: 20px 0;
+  text-align: center;
+  vertical-align: top;
+  width: 350px; }
+#card-results #results-links {
+  position: relative;
+  z-index: 1; }
+  #card-results #results-links #legend {
+    text-align: center;
+    line-height: 2em;
+    margin: -3em auto 0 auto;
+    background-color: #fff;
+    position: relative;
+    z-index: 30;
+    width: 50px; }
+#card-results .holder a {
+  background-color: #adadaf;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px;
+  padding: 8px;
+  vertical-align: middle; }
+#card-results .holder a:nth-child(2),
+#card-results .holder a:nth-child(3),
+#card-results .holder a:nth-child(4),
+#card-results .holder a:nth-child(5) {
+  position: absolute;
+  top: -99999em; }
+#card-results .holder span {
+  display: none !important; }
+#card-results .holder .jp-current,
+#card-results .holder .jp-current:hover,
+#card-results .holder .jp-disabled,
+#card-results .holder .jp-disabled:hover {
+  background-color: #009bba;
+  cursor: default; }
+#card-results .holder .jp-previous {
+  background-image: url("../img/left-arrow-active.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+  padding: 12px;
+  margin-right: 25px; }
+#card-results .holder .jp-previous.jp-disabled {
+  background-image: url("../img/left-arrow-inactive.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+  padding: 12px; }
+#card-results .holder .jp-next {
+  background-image: url("../img/right-arrow-active.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+  padding: 12px;
+  margin-left: 25px; }
+#card-results .holder .jp-next.jp-disabled {
+  background-image: url("../img/right-arrow-inactive.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+  padding: 12px; }
+#card-results .card-hero {
+  min-height: 400px;
+  background-color: #f9f9f9;
+  position: relative;
+  padding-top: 100px; }
+  #card-results .card-hero .rec-tag {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #009bbb; }
+    #card-results .card-hero .rec-tag p {
+      font-family: "BentonSans Regular" !important;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 0.91;
+      text-align: center;
+      color: #ffffff;
+      margin: 10px 0; }
+    #card-results .card-hero .rec-tag img {
+      vertical-align: text-bottom; }
+  #card-results .card-hero .cards {
+    width: 80%;
+    height: auto;
+    zbox-shadow: 10px 10px 5px #888888;
+    margin-bottom: 1em; }
+  #card-results .card-hero .amex-hd {
+    color: #002663;
+    font-size: 15px;
+    font-family: "BentonSans Book" !important;
+    color: #4d4f53; }
+  #card-results .card-hero .card-name-hd {
+    color: #4d4f53;
+    font-size: 22px;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.25; }
+#card-results .card-features {
+  width: 90%;
+  margin: 40px auto 0 auto;
+  text-align: left !important; }
+  #card-results .card-features .intro {
+    font-size: 18px !important;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.33;
+    color: #4d4f53;
+    width: 100%;
+    height: 70px;
+    vertical-align: top; }
+  #card-results .card-features .regular {
+    font-size: 16px !important;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.33;
+    color: #4d4f53;
+    width: 100%;
+    height: 70px;
+    vertical-align: top; }
+  #card-results .card-features .divider {
+    font-size: 16px !important;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.33;
+    color: #4d4f53;
+    width: 100%;
+    height: 150px;
+    vertical-align: top;
+    padding-top: 20px;
+    border-bottom: solid #eee 1px; }
+  #card-results .card-features .feature-heading {
+    font-size: 16px !important;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.33;
+    color: #4d4f53;
+    width: 100%;
+    height: 70px;
+    vertical-align: top;
+    padding-top: 5px; }
+  #card-results .card-features .short-divider {
+    font-size: 16px !important;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.33;
+    color: #4d4f53;
+    width: 100%;
+    height: 50px;
+    vertical-align: top;
+    padding-top: 15px;
+    border-bottom: solid #eee 1px; }
+  #card-results .card-features p {
+    font-size: 16px !important;
+    font-family: "BentonSans Book" !important;
+    line-height: 1.33;
+    color: #4d4f53; }
+  #card-results .card-features h3 {
+    font-family: "BentonSans Regular" !important;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4d4f53; }
+  #card-results .card-features .feature-links {
+    margin-bottom: 25px; }
+    #card-results .card-features .feature-links a {
+      font-family: "BentonSans Regular" !important;
+      font-size: 15px;
+      color: #002663;
+      text-decoration: none; }
+#card-results .contact-button {
+  width: 100%;
+  padding-left: 5%;
+  margin: 0 auto 20px 0;
+  text-align: left; }
+#card-results .contact-button .btn-primary {
+  background-color: #002663;
+  font-family: "BentonSans Book" !important;
+  font-size: 14px;
+  border-radius: 3px;
+  border-color: #002663;
+  padding: 9px 20.375px;
+  color: #fff; }
+#card-results .card-terms {
+  padding-left: 5%; }
+
+#cardterms,
+#terms,
+.terms {
+  padding: 75px 105px;
+  background-color: #f2f2f2;
+  font-size: 12px; }
+  #cardterms .read,
+  #terms .read,
+  .terms .read {
+    overflow: hidden;
+    font-size: 12px !important;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-bottom: 10px; }
+  #cardterms .read-less,
+  #terms .read-less,
+  .terms .read-less {
+    height: 200px !important; }
+  #cardterms .explorer-fix,
+  #terms .explorer-fix,
+  .terms .explorer-fix {
+    margin-top: 75px; }
+
+#blurb1,
+#cblurb1 {
+  border-bottom: solid 1px #f2f2f2;
+  padding: 15px 0;
+  clear: both; }
+  #blurb1 h4,
+  #cblurb1 h4 {
+    font-family: "BentonSans Book" !important;
+    font-size: 22px;
+    line-height: 1.25;
+    text-align: center;
+    color: #4d4f53; }
+
+#blurb2,
+#cblurb2 {
+  border-bottom: solid 1px #f2f2f2;
+  padding: 15px 0; }
+  #blurb2 a,
+  #cblurb2 a {
+    color: #002663; }
+  #blurb2 h5,
+  #cblurb2 h5 {
+    font-family: "BentonSans Book" !important;
+    font-size: 16px;
+    text-align: center;
+    color: #002663; }
+
+#blurb3,
+#cblurb3 {
+  padding: 15px 0; }
+  #blurb3 a,
+  #cblurb3 a {
+    color: #002663; }
+  #blurb3 h5,
+  #cblurb3 h5 {
+    font-family: "BentonSans Regular" !important;
+    font-size: 16px;
+    text-align: center;
+    color: #002663; }
+
+@media (max-width: 1200px) {
+  #question-container .rel-desc {
+    display: none; } }
+@media (max-width: 768px) {
+  #cf-background {
+    position: relative;
+    z-index: 999;
+    background: #fff url("https://www.aexp-static.com/nav/ngn/img/iNav_ngi_sprite_new.gif?ver=0916_01") repeat-x scroll 0 -123px;
+    clear: both;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%; }
+    #cf-background #cf-header-mob {
+      padding: 0.5em;
+      font-family: "BentonSans Regular" !important;
+      font-size: 16px; }
+      #cf-background #cf-header-mob table {
+        border-collapse: collapse; }
+        #cf-background #cf-header-mob table td {
+          padding-right: 1em;
+          color: #333333; }
+          #cf-background #cf-header-mob table td img {
+            width: 54px;
+            height: 48px; }
+
+  #hero-container {
+    background-image: url("../img/Hero_Image_Mobile.jpg");
+    background-position: center center;
+    margin-top: 15px;
+    max-height: 450px; }
+    #hero-container #heading-cont {
+      width: 220px; }
+      #hero-container #heading-cont h1 {
+        font-size: 31px;
+        margin-top: 20px; }
+
+  #main-content {
+    padding-left: 0;
+    padding-right: 0; }
+
+  #hero-container {
+    padding: 5px; }
+
+  #question-container {
+    padding: 20px; }
+    #question-container .row {
+      margin-bottom: 0px; }
+    #question-container h4 {
+      font-size: 14px; }
+    #question-container label {
+      font-size: 22px; }
+    #question-container .trigger {
+      font-size: 22px;
+      margin-bottom: 30px;
+      padding: 5px 20px; }
+    #question-container .activetrigger {
+      font-size: 22px;
+      padding: 5px 20px; }
+    #question-container .dropcontainer ul {
+      font-size: 22px; }
+    #question-container .dropcontainer ul li {
+      padding: 5px 18px; }
+    #question-container .drop1,
+    #question-container .drop2,
+    #question-container .drop3,
+    #question-container .drop4,
+    #question-container .drop5,
+    #question-container .drop6 {
+      width: 100%; }
+    #question-container .rel-desc {
+      display: block;
+      top: 8em; }
+    #question-container #submit-find {
+      width: 100%; }
+
+  #suggested-cards {
+    /* MR Modals */ }
+    #suggested-cards h2 {
+      text-align: center; }
+    #suggested-cards .checkbox label,
+    #suggested-cards .radio label {
+      padding-left: 0px;
+      width: 100%;
+      text-align: center; }
+    #suggested-cards .btn.btn-primary.toggle-on {
+      left: -15%; }
+    #suggested-cards .btn.btn-default.active.toggle-off {
+      left: 35%; }
+    #suggested-cards .modal-dialog {
+      width: 375px; }
+      #suggested-cards .modal-dialog .modal-content {
+        border: 0;
+        border-radius: 0; }
+        #suggested-cards .modal-dialog .modal-content .modal-header {
+          background-color: #009bbb;
+          color: #ffffff;
+          font-family: "BentonSans Book" !important;
+          padding: 50px 21px 60px 21px !important;
+          text-align: center; }
+          #suggested-cards .modal-dialog .modal-content .modal-header h1 {
+            font-size: 32px;
+            line-height: 1.09;
+            margin: 0 0 25px 0; }
+          #suggested-cards .modal-dialog .modal-content .modal-header p {
+            font-size: 18px;
+            line-height: 1.33; }
+          #suggested-cards .modal-dialog .modal-content .modal-header .cards {
+            margin-top: 30px;
+            width: 260px; }
+          #suggested-cards .modal-dialog .modal-content .modal-header .details-button {
+            margin-top: 15px;
+            text-align: center; }
+            #suggested-cards .modal-dialog .modal-content .modal-header .details-button .btn-primary {
+              border-radius: 3px !important;
+              padding: 12px 15px;
+              font-family: "BentonSans Regular" !important;
+              font-size: 14px;
+              background-color: #002663;
+              border: solid 1px #002663; }
+          #suggested-cards .modal-dialog .modal-content .modal-header .close {
+            color: #ffffff;
+            background: none;
+            opacity: 1;
+            font-weight: 400;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 10px; }
+
+  #card-results {
+    margin: 0;
+    padding-left: 20px !important;
+    padding-right: 20px !important; }
+    #card-results ul > li {
+      width: 100%;
+      margin: 0; }
+    #card-results #results-links #legend {
+      width: 80px; }
+    #card-results .card-features .regular,
+    #card-results .card-features .divider,
+    #card-results .card-features .feature-heading,
+    #card-results .card-features .short-divider {
+      height: auto;
+      padding: 10px 0; }
+    #card-results .contact-button {
+      text-align: center; }
+    #card-results .card-terms a {
+      text-align: center; }
+
+  #cardterms,
+  #terms {
+    padding: 20px 20px 10px 20px; }
+    #cardterms .container,
+    #terms .container {
+      padding: 0;
+      margin: 0; }
+      #cardterms .container .explorer-fix,
+      #terms .container .explorer-fix {
+        margin-top: 10px; } }
+/*-------------------------------------*/
+    /*       CARD LANDING PAGES
+/*-------------------------------------*/
+#card-headings {
+  background-color: #009bbb;
+  color: #ffffff;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: -7px;
+  margin-bottom: 80px; }
+  #card-headings h2 {
+    font-family: "BentonSans Bold" !important;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center; }
+  #card-headings p {
+    font-family: "BentonSans Book" !important;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center; }
+
+#rewards {
+  background-color: #f9f9f9;
+  text-align: center;
+  min-height: 500px; }
+  #rewards .cards {
+    width: 80%;
+    height: auto;
+    zbox-shadow: 10px 10px 5px #888888;
+    margin: 56px 0 1em 0; }
+  #rewards h2 {
+    font-family: "BentonSans Regular" !important;
+    font-size: 16px;
+    line-height: 1.41;
+    color: #4d4f53; }
+
+#rewards {
+  min-height: 388px; }
+  #rewards p,
+  #rewards h2 {
+    margin: 0; }
+  #rewards .cards {
+    width: 260px; }
+  #rewards .contact-button {
+    margin-top: 15px; }
+
+#benefits {
+  min-height: 388px;
+  padding: 0 80px 80px 80px;
+  color: #4d4f53; }
+  #benefits h1 {
+    font-family: "BentonSans Book" !important;
+    font-size: 38px;
+    margin-top: 0; }
+  #benefits h2 {
+    font-family: "BentonSans Book" !important;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px; }
+  #benefits p {
+    font-family: "BentonSans Book" !important;
+    font-size: 15px;
+    line-height: 1.6; }
+  #benefits .contact-button {
+    width: 100%;
+    margin-bottom: 20px; }
+  #benefits .contact-button .btn-primary {
+    background-color: #002663;
+    font-family: "BentonSans Regular" !important;
+    font-size: 15px;
+    border-radius: 6px;
+    border-color: #002663;
+    padding: 12px 20px;
+    color: #fff; }
+
+#blurb0 {
+  padding-top: 1em;
+  padding-bottom: 4em; }
+  #blurb0 p {
+    font-family: "BentonSans Regular" !important;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+    color: #666666; }
+  #blurb0 a {
+    color: #002664;
+    text-decoration: underline; }
+
+.platinum-corporate-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/01-Caro_img_D_Corporate-plat.jpg"); }
+
+.gold-corporate-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/02-Caro_img_D_Corporate-gold.jpg"); }
+
+.green-corporate-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/03-Caro_img_D_Corporate-green.jpg"); }
+
+.qantas-corporate-platinum-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/04-Caro_img_D_Qantas-Corporate-plat.jpg"); }
+
+.qantas-corporate-gold-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/05-Caro_img_D_Qantas-Corporate-gold.jpg"); }
+
+.qantas-corporate-green-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/06-Caro_img_D_Qantas-Corporate-green.jpg"); }
+
+.qantas-business-credit-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/07-Caro_img_D_Qantas-Business-credit-card.jpg"); }
+
+.qantas-business-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/08-Caro_img_D_Qantas-Business-card.jpg"); }
+
+.qantas-business-rewards-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/15-Caro_img_D_Qantas-Business-Rewards-card.jpg"); }
+
+.velocity-platinum-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/09-Caro_img_Velocity-Platinum_card.jpg"); }
+
+.business-platinum-card-hero {
+  background-image: url("..//img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/14-Caro_img_D_Business-platinum.jpg"); }
+
+.business-gold-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/10-Caro_img_D_Business-gold.jpg"); }
+
+.business-green-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/11-Caro_img_D_Business-green.jpg"); }
+
+.business-accelerator-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/12-Caro_img_D_Business-accelerator-card.jpg"); }
+
+.business-explorer-credit-card-hero {
+  background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Desktop/13-Caro_img_D_Business-Explorer.jpg"); }
+
+@media (max-width: 768px) {
+  .platinum-corporate-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/01-Caro_img_M_Corporate-plat.jpg"); }
+
+  .gold-corporate-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/02-Caro_img_M_Corporate-gold.jpg"); }
+
+  .green-corporate-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/03-img_M_Corporate-green.jpg"); }
+
+  .qantas-corporate-platinum-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/04-Caro_img_M_Qantas-Corporate-plat.jpg"); }
+
+  .qantas-corporate-gold-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/05-Caro_img_M_Qantas-Corporate-gold.jpg"); }
+
+  .qantas-corporate-green-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/06-Caro_img_M_Qantas-Corporate-green.jpg"); }
+
+  .qantas-business-credit-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/07-img_M_Qantas-Business-credit-card.jpg"); }
+
+  .qantas-business-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/08-img_M_Qantas-card.jpg"); }
+
+  .qantas-business-rewards-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/15-img_M_Qantas-Rewards-card.jpg"); }
+
+  .velocity-platinum-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/09-Caro_img_M_Velocity-plat-card.jpg"); }
+
+  .business-platinum-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/14-img_M_Business-platinum.jpg"); }
+
+  .business-gold-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/10-img_M_Business-gold.jpg"); }
+
+  .business-green-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/11-img_M_Business-green.jpg"); }
+
+  .business-accelerator-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/12-img_M_Business-accelerator-card.jpg"); }
+
+  .business-explorer-credit-card-hero {
+    background-image: url("../img/1708044_Individual_Card_Landing_Page_Images/1708044_Individual_Card_Landing_Page_Images/Mobile/13-Caro_img_M_Business-Explorer.jpg"); } }
+#cp-slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 450px; }
+  #cp-slider .container {
+    position: relative;
+    padding-top: 80px; }
+    #cp-slider .container #carousel-container {
+      padding: 30px;
+      width: 288px;
+      min-height: 250px;
+      opacity: 0.9;
+      background-color: #ffffff;
+      position: relative; }
+      #cp-slider .container #carousel-container .carousel-inner .item {
+        width: 100%;
+        font-family: "BentonSans Book" !important;
+        color: #4d4f53; }
+        #cp-slider .container #carousel-container .carousel-inner .item h1 {
+          font-size: 24px;
+          margin-top: 0; }
+        #cp-slider .container #carousel-container .carousel-inner .item p {
+          font-size: 15px;
+          line-height: 1.4; }
+      #cp-slider .container #carousel-container #static-cap {
+        display: table;
+        width: 100%;
+        position: absolute;
+        bottom: 15px;
+        left: 0; }
+        #cp-slider .container #carousel-container #static-cap .static-cap-row {
+          display: table-row; }
+          #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell {
+            display: table-cell;
+            vertical-align: bottom;
+            position: relative; }
+            #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell .carousel-indicators {
+              margin-left: 0 !important;
+              position: static;
+              width: 100%; }
+              #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell .carousel-indicators li {
+                background-color: #dbdbdb !important;
+                border-radius: 0 !important;
+                border: 0 !important;
+                height: 2px !important;
+                width: 40px !important;
+                margin: 1px !important; }
+              #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell .carousel-indicators .active {
+                background-color: #009bbb !important; }
+            #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell #carousel-directions {
+              width: 100%;
+              position: relative; }
+              #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell #carousel-directions p {
+                padding-bottom: 5px; }
+                #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell #carousel-directions p .carousel-control.left,
+                #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell #carousel-directions p .carousel-control.right {
+                  position: absolute;
+                  background-image: none;
+                  position: static; }
+                  #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell #carousel-directions p .carousel-control.left img,
+                  #cp-slider .container #carousel-container #static-cap .static-cap-row .static-cap-cell #carousel-directions p .carousel-control.right img {
+                    width: 24px;
+                    height: auto; }
+
+#card-features {
+  padding-top: 100px; }
+  #card-features h1 {
+    font-family: "BentonSans Book" !important;
+    font-size: 30px;
+    text-align: left;
+    color: #4d4f53;
+    margin-bottom: 40px;
+    margin-top: 0; }
+  #card-features #desktop-tabs .nav-tabs {
+    border-bottom: 3px solid #dbdbdb; }
+  #card-features #desktop-tabs .nav-tabs > li {
+    margin-bottom: -3px;
+    color: #666666;
+    font-family: "BentonSans Regular" !important;
+    font-size: 16px;
+    text-align: center;
+    min-width: 25%; }
+  #card-features #desktop-tabs .nav-tabs > li > a {
+    border-radius: 0 !important;
+    color: #666666;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important; }
+    #card-features #desktop-tabs .nav-tabs > li > a .rewards-icon {
+      background-image: url("../img/ic_rewards_inactive.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+    #card-features #desktop-tabs .nav-tabs > li > a .travel-icon {
+      background-image: url("../img/ic_travel_inactive.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+    #card-features #desktop-tabs .nav-tabs > li > a .access-icon {
+      background-image: url("../img/ic_access_and_offers_inactive.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+    #card-features #desktop-tabs .nav-tabs > li > a .services-icon {
+      background-image: url("../img/ic_services_and_tools_inactive.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+  #card-features #desktop-tabs .nav-tabs > li > a:hover {
+    border: 0;
+    background-color: #ffffff;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: solid 3px #019bbb; }
+  #card-features #desktop-tabs .nav-tabs > li.active > a,
+  #card-features #desktop-tabs .nav-tabs > li.active > a:focus,
+  #card-features #desktop-tabs .nav-tabs > li.active > a:hover {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: solid 3px #019bbb;
+    color: #009cbb;
+    cursor: default; }
+    #card-features #desktop-tabs .nav-tabs > li.active > a .rewards-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:focus .rewards-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:hover .rewards-icon {
+      background-image: url("../img/ic_rewards_active.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+    #card-features #desktop-tabs .nav-tabs > li.active > a .travel-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:focus .travel-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:hover .travel-icon {
+      background-image: url("../img/ic_travel_active.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+    #card-features #desktop-tabs .nav-tabs > li.active > a .access-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:focus .access-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:hover .access-icon {
+      background-image: url("../img/ic_access_and_offers_active.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+    #card-features #desktop-tabs .nav-tabs > li.active > a .services-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:focus .services-icon,
+    #card-features #desktop-tabs .nav-tabs > li.active > a:hover .services-icon {
+      background-image: url("../img/ic_services_and_tools_active.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+      width: 32px;
+      margin: 0 auto; }
+  #card-features #desktop-tabs .tab-content .tab-pane {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    font-family: "BentonSans Regular" !important;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4d4f53; }
+    #card-features #desktop-tabs .tab-content .tab-pane .row {
+      margin-bottom: 60px; }
+      #card-features #desktop-tabs .tab-content .tab-pane .row .right-side {
+        padding: 0 80px; }
+        #card-features #desktop-tabs .tab-content .tab-pane .row .right-side ol,
+        #card-features #desktop-tabs .tab-content .tab-pane .row .right-side ul {
+          margin-left: 20px; }
+        #card-features #desktop-tabs .tab-content .tab-pane .row .right-side .bull-title {
+          font-family: "BentonSans Medium" !important; }
+  #card-features #mobile-accordion {
+    display: none; }
+
+#card-specialist-cont {
+  text-align: center;
+  background-color: #009bbb !important;
+  float: left;
+  width: 100%;
+  padding-bottom: 50px; }
+  #card-specialist-cont #card-display {
+    min-height: 305px;
+    padding: 0; }
+    #card-specialist-cont #card-display .cards {
+      width: 240px;
+      height: auto;
+      margin: 84px 0 0 0; }
+  #card-specialist-cont #specialist-cont {
+    color: #ffffff;
+    padding: 84px 0 0 0;
+    min-height: 305px; }
+    #card-specialist-cont #specialist-cont h1 {
+      margin-bottom: 18px;
+      margin-top: 0;
+      font-size: 28px;
+      text-align: left;
+      font-family: "BentonSans Book" !important; }
+    #card-specialist-cont #specialist-cont .contact-button {
+      margin-bottom: 20px; }
+      #card-specialist-cont #specialist-cont .contact-button p {
+        text-align: left; }
+        #card-specialist-cont #specialist-cont .contact-button p .btn-primary {
+          background-color: #002663;
+          font-family: "BentonSans Regular" !important;
+          font-size: 14px;
+          border-radius: 3px;
+          border-color: #002663;
+          padding: 10px 10px;
+          color: #fff; }
+        #card-specialist-cont #specialist-cont .contact-button p .apply-btn {
+          width: 110px; }
+
+@media (max-width: 768px) {
+  #card-headings {
+    padding: 30px 0;
+    margin-bottom: 40px; }
+    #card-headings p {
+      margin: 0; }
+
+  #card-promo-cont {
+    padding-left: 0;
+    padding-right: 0; }
+
+  #rewards {
+    min-height: auto;
+    padding-bottom: 2em; }
+
+  #benefits {
+    min-height: auto;
+    padding: 0 2em 2em 2em;
+    text-align: center; }
+    #benefits h1 {
+      font-size: 36px; }
+
+  #cp-slider {
+    position: relative;
+    min-height: 197px; }
+    #cp-slider .container {
+      position: absolute;
+      padding: 0;
+      left: 0;
+      bottom: -300px; }
+      #cp-slider .container #carousel-container {
+        padding: 0px;
+        width: 100%;
+        opacity: 1;
+        background-color: #f9f9f9;
+        min-height: 300px; }
+        #cp-slider .container #carousel-container .carousel-inner .item {
+          width: 100%;
+          padding: 10%;
+          font-family: "BentonSans Book" !important;
+          color: #4d4f53; }
+          #cp-slider .container #carousel-container .carousel-inner .item h1 {
+            font-size: 24px; }
+          #cp-slider .container #carousel-container .carousel-inner .item p {
+            font-size: 15px;
+            line-height: 1.4; }
+
+  #card-features {
+    padding-top: 402px; }
+    #card-features #desktop-tabs {
+      display: none; }
+    #card-features #mobile-accordion {
+      display: block; }
+      #card-features #mobile-accordion #accordion {
+        border-bottom: solid 1px #f2f2f2; }
+        #card-features #mobile-accordion #accordion .panel-default,
+        #card-features #mobile-accordion #accordion .panel {
+          border-top: solid 1px #f2f2f2;
+          border-left: 0;
+          border-right: 0;
+          border-bottom: 0;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+          #card-features #mobile-accordion #accordion .panel-default .panel-heading,
+          #card-features #mobile-accordion #accordion .panel .panel-heading {
+            background-color: #ffffff;
+            padding: 27px 15px 26px 15px; }
+            #card-features #mobile-accordion #accordion .panel-default .panel-heading .panel-title,
+            #card-features #mobile-accordion #accordion .panel .panel-heading .panel-title {
+              position: relative; }
+              #card-features #mobile-accordion #accordion .panel-default .panel-heading .panel-title .glyphicon,
+              #card-features #mobile-accordion #accordion .panel .panel-heading .panel-title .glyphicon {
+                position: absolute;
+                right: 0px;
+                color: #009bbb;
+                -webkit-text-stroke: 3.5px white; }
+            #card-features #mobile-accordion #accordion .panel-default .panel-heading a,
+            #card-features #mobile-accordion #accordion .panel .panel-heading a {
+              width: 100%;
+              color: #4d4f53;
+              font-size: 22px;
+              font-family: "BentonSans Regular" !important; }
+              #card-features #mobile-accordion #accordion .panel-default .panel-heading a h4,
+              #card-features #mobile-accordion #accordion .panel .panel-heading a h4 {
+                font-size: 22px;
+                font-family: "BentonSans Regular" !important; }
+                #card-features #mobile-accordion #accordion .panel-default .panel-heading a h4 img,
+                #card-features #mobile-accordion #accordion .panel .panel-heading a h4 img {
+                  margin-right: 10px;
+                  vertical-align: text-bottom; }
+            #card-features #mobile-accordion #accordion .panel-default .panel-heading a:hover,
+            #card-features #mobile-accordion #accordion .panel-default .panel-heading a:focus,
+            #card-features #mobile-accordion #accordion .panel-default .panel-heading a:active,
+            #card-features #mobile-accordion #accordion .panel .panel-heading a:hover,
+            #card-features #mobile-accordion #accordion .panel .panel-heading a:focus,
+            #card-features #mobile-accordion #accordion .panel .panel-heading a:active {
+              text-decoration: none;
+              color: #4d4f53; }
+          #card-features #mobile-accordion #accordion .panel-default .panel-body,
+          #card-features #mobile-accordion #accordion .panel .panel-body {
+            font-family: "BentonSans Regular" !important;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4d4f53;
+            border-top: 0; }
+            #card-features #mobile-accordion #accordion .panel-default .panel-body ul,
+            #card-features #mobile-accordion #accordion .panel .panel-body ul {
+              margin-left: 20px; }
+            #card-features #mobile-accordion #accordion .panel-default .panel-body .bull-title,
+            #card-features #mobile-accordion #accordion .panel .panel-body .bull-title {
+              font-family: "BentonSans Medium" !important; }
+
+  #card-specialist-cont {
+    text-align: center;
+    background-color: #009bbb !important;
+    float: left;
+    width: 100%;
+    padding: 0 20px 50px 20px; }
+    #card-specialist-cont .container {
+      margin: 0;
+      padding: 0; }
+      #card-specialist-cont .container #card-display {
+        min-height: auto; }
+        #card-specialist-cont .container #card-display .cards {
+          width: 214px;
+          height: auto;
+          margin: 68px auto 0 auto; }
+      #card-specialist-cont .container #specialist-cont {
+        color: #ffffff;
+        padding-top: 10.5px;
+        min-height: auto; }
+        #card-specialist-cont .container #specialist-cont h1 {
+          margin-bottom: 18px;
+          margin-top: 0;
+          font-size: 28px;
+          text-align: center; }
+        #card-specialist-cont .container #specialist-cont .contact-button {
+          margin-bottom: 20px; }
+          #card-specialist-cont .container #specialist-cont .contact-button p {
+            text-align: center; }
+            #card-specialist-cont .container #specialist-cont .contact-button p .btn-primary {
+              background-color: #002663;
+              font-family: "BentonSans Regular" !important;
+              font-size: 14px;
+              border-radius: 3px;
+              border-color: #002663;
+              padding: 10px 10px;
+              color: #fff; } }
+
+
